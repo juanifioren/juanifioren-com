@@ -1,0 +1,107 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:700,300,400);
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafaf9;
+    font-family: 'Roboto Condensed', Arial;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0px;
+    padding: 0px;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar {
+    background-color: #1abc9c;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 30%;
+    max-width: 460px;
+}
+
+.sidebar .first {
+    background-color: #34495e;
+    height: 200px;
+    padding: 5px;
+    text-align: center;
+}
+
+.sidebar .first h1 {
+    color: #fafaf9;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.sidebar .first h2 {
+    color: #bdc3c7;
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.sidebar .second .menu {
+    list-style: none;
+    margin-top: 60px;
+}
+
+.sidebar .second .menu li {
+    margin-bottom: 5px;
+}
+
+.sidebar .second .menu a {
+    color: rgba(52, 73, 94, 0.75);
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.sidebar .second .menu a:hover {
+    color: rgba(52, 73, 94, 1);
+}
+
+.sidebar img {
+    -webkit-border-radius: 500px;-moz-border-radius: 500px;border-radius: 500px;
+    -webkit-filter: grayscale(100%);filter: grayscale(100%);filter: gray;filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+    width: 40%;
+    position: absolute;
+    bottom: 25px;
+    margin-left: 30%;
+}
+
+.content {
+    color: rgba(52, 73, 94, 0.95);
+    margin-left: 30%;
+    width: 70%;
+}
+
+.content-wrapper {
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 1000px;
+    padding: 20px 0px;
+}
+
+.footer {
+   color: #9a9a9a;
+   background: #ececec;
+   padding: 2px 20px;
+   margin: 0 auto;
+   margin-top: 40px;
+   width: 90%;
+   text-align: center;
+}

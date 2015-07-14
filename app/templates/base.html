@@ -1,0 +1,53 @@
+{% load i18n %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>JuaniFioren</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/site.css' %}">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="sidebar">
+        <div class="first">
+            <h1>Juan Ignacio Fiorentino</h1>
+            <h2>I'm passionate web developer.</h2>
+        </div>
+        <div class="second">
+            <ul class="menu">
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <img src="https://avatars3.githubusercontent.com/u/5168681?v=3&s=460">
+    </div>
+
+    <div class="content">
+        <div class="content-wrapper">
+
+            {% block content %}{% endblock %}
+            
+            <div class="footer">
+                <p><a href="https://github.com/juanifioren/juanifioren-com" target="_BLANK">Like this site? See the source code here.</a> <a href="https://www.djangoproject.com/" target="_BLANK">Built with Django</a>.</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/site.js' %}"></script>
+</body>
+</html>

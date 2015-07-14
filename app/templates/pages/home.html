@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+
+    {% for post in posts %}
+    <h1><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
+    <p>{{ post.date_posted }}</p>
+    {% empty %}
+    <p>No posts yet! Create your first one <a href="{% url 'admin:index' %}">here</a></p>
+    {% endfor %}
+
+{% endblock %}
