@@ -5,7 +5,7 @@
 {% block content %}
 
     <h1><a href="">{{ post.title }}</a></h1>
-    <p>{{ post.date_posted }}</p>
+    <p>Posted on {{ post.date_posted }}</p>
     {{ post.content | markdownify | safe }}
 
 {% endblock %}
