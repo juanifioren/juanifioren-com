@@ -105,3 +105,48 @@ a:active {
    width: 90%;
    text-align: center;
 }
+
+@media only screen and (max-width:768px) {
+    .sidebar {
+        position: relative;
+        max-width: none;
+        width: 100%;
+    }
+    .sidebar .first {
+        height: 70px;
+        text-align: left;
+    }
+    .sidebar .first h1 {
+        font-size: 26px;
+        padding-left: 10px;
+    }
+    .sidebar .first h2 {
+        display: none;
+    }
+    .sidebar .second .menu {
+        margin-top: 0;
+        padding: 10px 15px;
+    }
+    .sidebar .second .menu li a {
+        font-size: 25px;
+    }
+    .sidebar img {
+        display: none;
+    }
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+    .content-wrapper {
+        padding: 5px 0;
+    }
+}
+
+@media only screen and (min-width:769px) and (max-width:1100px) {
+    .sidebar .first h1 {
+        font-size: 30px;
+    }
+    .sidebar .first h2 {
+        font-size: 20px;
+    }
+}
