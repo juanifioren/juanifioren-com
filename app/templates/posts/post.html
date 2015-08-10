@@ -4,8 +4,13 @@
 
 {% block content %}
 
-    <h1><a href="">{{ post.title }}</a></h1>
-    <p>Posted on {{ post.date_posted }}</p>
-    {{ post.content | markdownify | safe }}
+    <h1 class="post-title"><a href="">{{ post.title }}</a></h1>
+    <div class="post-date">Posted on {{ post.date_posted | date:"l, d M Y" }}.</div>
+    <p>{{ post.content | markdownify | safe }}</p>
+    <ul class="post-tags">
+    	{% for tag in post.tag_list %}
+    	<li><a href="#{{ tag }}">{{ tag | upper }}</a></li>
+    	{% endfor %}
+    </ul>
 
 {% endblock %}

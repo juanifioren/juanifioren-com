@@ -23,6 +23,13 @@ a:active {
     color: inherit;
 }
 
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid #ececec;
+    margin: 20px 0;
+}
+
 .sidebar {
     background-color: #1abc9c;
     position: fixed;
@@ -96,6 +103,10 @@ a:active {
     padding: 20px 0px;
 }
 
+.content-wrapper h1 {
+    margin: 5px;
+}
+
 .footer {
    color: #9a9a9a;
    background: #ececec;
@@ -104,6 +115,46 @@ a:active {
    margin-top: 40px;
    width: 90%;
    text-align: center;
+}
+
+.post-title {
+    font-size: 55px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.post-date {
+    background-color: #1abc9c;
+    color: #fafaf9;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.post-tags {
+    padding: 0;
+    list-style-type: none;
+}
+
+.post-tags li {
+    text-align: center;
+    display: inline-block;
+}
+
+.post-tags a {
+    float: left;
+    width: 6em;
+    text-decoration: none;
+    color: #fafaf9;
+    font-size: 22px;
+    font-weight: 700;
+    background-color: #34495e;
+    padding: 0.2em 0.6em;
+    border-right: 1px solid white;
+}
+
+.post-tags a:hover {
+    background-color: #1abc9c;
 }
 
 @media only screen and (max-width:768px) {
@@ -124,11 +175,22 @@ a:active {
         display: none;
     }
     .sidebar .second .menu {
-        margin-top: 0;
-        padding: 10px 15px;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+    }
+    .sidebar .second .menu li {
+        display: inline;
+        float: left;
+        text-align: center;
+        margin: 0;
+        width: 50%;
+        padding: 15px;
     }
     .sidebar .second .menu li a {
+        background-color: rgba(50, 168, 145, 1);
         font-size: 25px;
+        padding: 5px 10px;
     }
     .sidebar img {
         display: none;
@@ -138,7 +200,14 @@ a:active {
         width: 100%;
     }
     .content-wrapper {
-        padding: 5px 0;
+        padding: 15px 0;
+    }
+    .footer {
+        padding: 3px 0;
+        width: 100%;
+    }
+    .post-title {
+        font-size: 35px;
     }
 }
 

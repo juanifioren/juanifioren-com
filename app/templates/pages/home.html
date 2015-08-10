@@ -5,10 +5,16 @@
 
     {% for post in posts %}
     <h1><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
-    <span>{{ post.date_posted }}</span>
-    	{% for tag in post.tag_list %}
-    	<a href="#{{ tag }}">{{ tag | capfirst }}</a>
-    	{% endfor %}
+    <span>{{ post.date_posted | date:"l, d M Y" }}.</span>
+    <span>Tags: 
+    {% for tag in post.tag_list %}
+    <a href="#{{ tag }}"><strong>{{ tag | upper }}</strong></a>
+    {% endfor %}
+    </span>
+
+    {% if not forloop.last %}
+    <hr>
+    {% endif %}
     {% empty %}
     <p>No posts yet! Create your first one <a href="{% url 'admin:index' %}">here</a></p>
     {% endfor %}
