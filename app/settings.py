@@ -89,3 +89,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'app/static'),
 )
+
+# Disqus settings
+
+DISQUS_SHORTNAME = 'juanifioren'

@@ -4,13 +4,27 @@
 
 {% block content %}
 
-    <h1 class="post-title"><a href="">{{ post.title }}</a></h1>
+    <h1 class="post-title">{{ post.title }}</h1>
     <div class="post-date">Posted on {{ post.date_posted | date:"l, d M Y" }}.</div>
     <p>{{ post.content | markdownify | safe }}</p>
     <ul class="post-tags">
-    	{% for tag in post.tag_list %}
-    	<li><a href="#{{ tag }}">{{ tag | upper }}</a></li>
-    	{% endfor %}
+        {% for tag in post.tag_list %}
+        <li><a href="{% url 'posts:posts-tag' tag %}">{{ tag | upper }}</a></li>
+        {% endfor %}
     </ul>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES * * */
+        var disqus_shortname = "{{ disqus_shortname }}";
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
 {% endblock %}

@@ -3,12 +3,16 @@
 
 {% block content %}
 
+    {% if tag %}
+    <div class="post-date">Posts with tag "{{ tag }}"</div>
+    {% endif %}
+
     {% for post in posts %}
     <h1><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
     <span>{{ post.date_posted | date:"l, d M Y" }}.</span>
     <span>Tags: 
     {% for tag in post.tag_list %}
-    <a href="#{{ tag }}"><strong>{{ tag | upper }}</strong></a>
+    <a href="{% url 'posts:posts-tag' tag %}"><strong>{{ tag | upper }}</strong></a>
     {% endfor %}
     </span>
 
